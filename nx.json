@@ -29,6 +29,9 @@
     "todos-e2e": {
       "tags": [],
       "implicitDependencies": ["todos"]
+    },
+    "components": {
+      "tags": []
     }
   }
 }
