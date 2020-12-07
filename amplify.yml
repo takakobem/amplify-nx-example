@@ -1,0 +1,28 @@
+version: 1
+applications:
+  - frontend:
+      phases:
+        build:
+          commands:
+            - yarn install
+            - yarn nx build todos
+      artifacts:
+        baseDirectory: ../../dist/apps/todos
+        files:
+          - '**/*'
+      cache:
+        paths: []
+    appRoot: apps/todos
+  - frontend:
+      phases:
+        build:
+          commands:
+            - yarn install
+            - yarn nx build-storybook components
+      artifacts:
+        baseDirectory: ../../dist/storybook/components
+        files:
+          - '**/*'
+      cache:
+        paths: []
+    appRoot: libs/components
